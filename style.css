@@ -20,10 +20,11 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: repeat(3, 150px);  /* Three columns of 150px each */
+    grid-template-rows: repeat(3, 150px);  /* Three rows of 150px each */
     gap: 10px;
     position: relative;
+    margin: 20px;
 }
 
 .link {
