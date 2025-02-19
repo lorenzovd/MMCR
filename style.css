@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    gap: 10px;
+    position: relative;
+}
+
+.link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.link-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+#wily {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f39c12;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+#wily img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.grid .link:nth-child(odd) {
+    background-color: #3498db;
+}
+
+.grid .link:nth-child(even) {
+    background-color: #9b59b6;
+}
+
+/* Hide dots initially */
+#second-stage {
+    display: none; /* Ensure it's hidden initially */
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px;
+    gap: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.dot:hover {
+    opacity: 1;
+}
+
+/* Show dots when Wily is clicked */
+#second-stage.active {
+    display: grid;
+}
