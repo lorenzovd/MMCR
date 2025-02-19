@@ -60,8 +60,8 @@ body {
 }
 
 #wily img {
-    width: 80%;
-    border-radius: 50%;
+    width: 100%;  /* Change to whatever size you want */
+    height: 100%;
 }
 
 .grid .link:nth-child(odd) {
